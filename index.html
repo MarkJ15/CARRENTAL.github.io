@@ -43,12 +43,11 @@
 
 <section id="customerLogin" class="auth-container" hidden>
   <div class="auth-card">
-    <p class="eyebrow">CUSTOMER PORTAL</p>
     <h1>Customer Login</h1>
-    <p class="subtitle">Login to your rental account.</p>
+    
 
     <form id="customerLoginForm">
-      <label for="customerIdentity">Username or Email</label>
+      <label for="customerIdentity">Username</label>
       <input id="customerIdentity" type="text" required>
 
       <label for="customerLoginPassword">Password</label>
@@ -65,22 +64,20 @@
     </p>
 
     <button type="button" class="back-button"
-      onclick="showAuthScreen('roles')">← Back</button>
+      onclick="showAuthScreen('roles')"> Back</button>
   </div>
 </section>
 
 
 <section id="customerSignup" class="auth-container" hidden>
   <div class="auth-card">
-    <p class="eyebrow">JOIN RICHARD RENTAL</p>
     <h1>Create Account</h1>
-    <p class="subtitle">Register a new customer account.</p>
 
     <form id="customerSignupForm">
-      <label for="newFullName">Full Name</label>
+      <label for="newFullName">Fullname</label>
       <input id="newFullName" type="text" required>
 
-      <label for="newEmail">Email Address</label>
+      <label for="newEmail">Email</label>
       <input id="newEmail" type="email" required>
 
       <label for="newUsername">Username</label>
@@ -103,48 +100,33 @@
     </p>
 
     <button type="button" class="back-button"
-      onclick="showAuthScreen('customerLogin')">← Back</button>
+      onclick="showAuthScreen('customerLogin')"> Back</button>
   </div>
 </section>
 
 
 <section id="adminLogin" class="auth-container" hidden>
   <div class="auth-card">
-    <p class="eyebrow">AUTHORIZED PERSONNEL</p>
+   
     <h1>Admin Login</h1>
-    <p class="subtitle">Sign in to manage the rental system.</p>
+    
 
     <form id="adminLoginForm">
-      <label for="adminIdentity">Admin Username</label>
+      <label for="adminIdentity">AdminName</label>
       <input id="adminIdentity" type="text" required>
 
       <label for="adminLoginPassword">Password</label>
       <input id="adminLoginPassword" type="password" required>
 
       <p id="adminLoginMessage" class="message" role="alert"></p>
-      <button class="primary-button" type="submit">ADMIN LOGIN</button>
+      <button class="primary-button" type="submit">LOGIN</button>
     </form>
 
     <button type="button" class="back-button"
-      onclick="showAuthScreen('roles')">← Back</button>
+      onclick="showAuthScreen('roles')">Back</button>
   </div>
 </section>
 
-<!-- SIMPLE DASHBOARDS: ADDITION -->
-<section id="customerDashboard" class="role-container dashboard" hidden>
-  <p class="eyebrow">CUSTOMER ACCOUNT</p>
-  <h1>Welcome, <span id="welcomeCustomer"></span>!</h1>
-  <p class="subtitle">You have successfully logged in.</p>
-  <button class="primary-button" onclick="logoutAccount()">LOGOUT</button>
-</section>
-
-<section id="adminDashboard" class="role-container dashboard" hidden>
-  <p class="eyebrow">ADMINISTRATION</p>
-  <h1>Welcome, Admin!</h1>
-  <p class="subtitle">You have successfully logged in to the admin portal.</p>
-  <p>Registered customers: <strong id="registeredCount">0</strong></p>
-  <button class="primary-button" onclick="logoutAccount()">LOGOUT</button>
-</section>
 
 <script src="script.js"></script>
 
